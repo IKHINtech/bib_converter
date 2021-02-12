@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={{ url_for('static', filename='bootstrap-4.6.0-dist/css/bootstrap.css')}} type="text/css">
+    <link rel="stylesheet" href={{ url_for('static',
+    filename='DataTables/DataTables-1.10.23/css/dataTables.bootstrap4.min.css') }} type="text/css">
+    <script src={{ url_for('static', filename='jquery-3.5.1.js')}}></script>
+    <script src={{ url_for('static',
+    filename='DataTables/dataTables.min.js') }}></script>
+    <script src={{ url_for('static',
+    filename='DataTables/DataTables-1.10.23/js/dataTables.bootstrap4.min.js') }}></script>
+    <title>Document</title>
+  </head>
+  <body>
+    
+      <h1>Data</h1>
+      <div class="col-md-12">
+        {{ table }}
+      <script>
+         $(document).ready(function(){
+        $('#example').DataTable();
+    });
+      </script>
+  </body>
+</html>

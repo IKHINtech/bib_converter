@@ -4,12 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={{ url_for('static',
+    filename='bootstrap-4.6.0-dist/css/bootstrap.css')}} type="text/css">
     <title>Bib Converter</title>
   </head>
   <body>
-    <form action="" method="post" enctype="multipart/form-data">
-      <input type="file" name="file" />
-      <input type="submit" value="Upload" />
-    </form>
+    <style>
+      #cover {
+        background: #222 url("https://unsplash.it/1920/1080/?random") center
+          center no-repeat;
+        background-size: cover;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      #cover-caption {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* only used for background overlay not needed for centering */
+      form:before {
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+        border-radius: 10px;
+      }
+    </style>
+    <section id="cover" class="min-vh-100">
+      <div id="cover-caption">
+        <div class="container">
+          <div class="row text-white">
+            <div
+              class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4"
+            >
+              <h1 class="display-4 py-2 text-truncate">
+                CONVERTER <br />TO EXCEL
+              </h1>
+              <div class="px-2">
+                <form
+                  class="was-validated"
+                  action=""
+                  method="POST"
+                  enctype="multipart/form-data"
+                  class="justify-content-center"
+                >
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input"
+                      name="filer_input"
+                      id="validatedCustomFile"
+                      required
+                    />
+                    <label
+                      class="custom-file-label rounded-pill"
+                      for="validatedCustomFile"
+                      >Pilih File...</label
+                    >
+                    <div class="invalid-feedback">
+                      Harap Isi File Terlebih dahulu
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-info btn-lg mt-2 rounded-pill"
+                  >
+                    Convert
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

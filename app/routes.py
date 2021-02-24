@@ -42,7 +42,7 @@ html = '''<!DOCTYPE html>
     <script src={{ url_for('static',filename='jquery-3.5.1.js')}}></script>
     <!-- Datatable-->
     <script src={{ url_for('static',
-    filename='DataTables/dataTables.min.js') }}></script>
+    filename='DataTables/datatables.min.js') }}></script>
     <!-- datatable bbotstrap-->
     <script src={{ url_for('static',
     filename='DataTables/DataTables-1.10.23/js/dataTables.bootstrap4.min.js') }}></script>

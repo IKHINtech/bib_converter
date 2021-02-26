@@ -1,7 +1,11 @@
 import re
+
+import RISparser
+from pandas.core.indexes.base import ensure_index
 from app import app
 from flask import flash, request, redirect, url_for, render_template, send_from_directory, render_template_string
 from config import Config
+import ris
 
 
 #perlengkapan convert
@@ -22,6 +26,7 @@ from bibliograph.parsing import parsers
 #xml
 import xml.etree.ElementTree as ET
 from io import StringIO
+import io
 import xmltodict, json
 
 
@@ -171,26 +176,22 @@ def convert():
                                                 table = df.to_html(index='Nomor', header='true', table_id='example', 
                                                 classes='table table-striped table-bordered'))
             elif file and file_ris(file.filename):
-                ris_file = file
-                # ris_str = ris_file
-                entries = rispy.load(ris_file)
-                # for enri in entries:
-                #     print(enri)
-                # mapping = TAG_KEY_MAPPING
-                # for data in ris_file:
-                #     entries = list(readris(ris_file, mapping=mapping))
-                #     return render_template('output1.html', data= entries.decode())
-                    ###############################
-                # mapping = TAG_KEY_MAPPING
-                # ris_file = file
-                # entries = list(readris(ris_file, mapping=mapping))
-                # render_template('output1.html', ris_file=entries)
-                # entries = list(readris(ris_file, mapping=mapping))
-                # pprint(sorted(entries[1].items()))
-                # data = pd.DataFrame(entries)
-                # output = data.to_html(header='true', table_id='example', classes='table table-striped table-bordered')
-                # # data1 = str(data, encoding='utf-8')
-                # return  render_template_string(html.decode(), filenm = file.filename, table = output )
+                # TODO
+                list1 = []
+                ris_file = file.stream.read()
+                reader = io.BytesIO(ris_file)
+                wrapper = io.TextIOWrapper(reader, encoding='utf-8')
+                entries = readris(wrapper) 
+                # for entry in entries:
+                #     list1.append(entry)
+                df = pd.DataFrame(entries)
+                df.index += 1
+                return render_template_string(html, filenm = file.filename, 
+                                                table = df.to_html(header='true', table_id='example', 
+                                                classes='table table-striped table-bordered'))    
+                # a = ris_file.save('data.ris')
+                # with open(ris_file, 'r', encoding='utf-8') as data_file:
+                # return df.to_html()
             else:
                 data = xmltodict.parse(file)
                 json_data = json.dumps(data)

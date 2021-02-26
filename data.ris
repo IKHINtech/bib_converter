@@ -1,0 +1,198 @@
+TY  - JOUR
+T1  - Improving prediction of water quality indices using novel hybrid machine-learning algorithms
+A1  - Bui, Duie Tien
+A1  - Khosravi, Khabat
+A1  - Tiefenbacher, John
+A1  - Nguyen, Hoang
+A1  - Kazakis, Nerantzis
+Y1  - 2020///
+KW  - Data mining
+KW  - Novel hybrid algorithms
+KW  - Prediction
+KW  - Water quality index
+PB  - Elsevier B.V.
+JF  - Science of the Total Environment
+VL  - 721
+DO  - 10.1016/j.scitotenv.2020.137612
+N2  - River water quality assessment is one of the most important tasks to enhance water resources management plans. A water quality index (WQI) considers several water quality variables simultaneously. Traditionally WQI calculations consume time and are often fraught with errors during derivations of sub-indices. In this study, 4 standalone (random forest (RF), M5P, random tree (RT), and reduced error pruning tree (REPT)) and 12 hybrid data-mining algorithms (combinations of standalones with bagging (BA), CV parameter selection (CVPS) and randomizable filtered classification (RFC)) were used to create Iran WQI (IRWQIsc) predictions. Six years (2012 to 2018) of monthly data from two water quality monitoring stations within the Talar catchment were compiled. Using Pearson correlation coefficients, 10 different input combinations were constructed. The data were divided into two groups (ratio 70:30) for model building (training dataset) and model validation (testing dataset) using a 10-fold cross-validation technique. The models were evaluated using several statistical and visual evaluation metrics. Result show that fecal coliform (FC) and total solids (TS) had the greatest and least effect on the prediction of IRWQIsc. The best input combinations varied among the algorithms; generally variables with very low correlations displayed weaker performance. Hybrid algorithms improved the prediction power of several of the standalone models, but not all. Hybrid BA-RT outperformed the other models (R2 = 0.941, RMSE = 2.71, MAE = 1.87, NSE = 0.941, PBIAS = 0.500). PBIAS indicated that all algorithms, with the exceptions of RT, BA-RT and CVPS-REPT, overestimated WQI values.
+ER  - 
+TY  - JOUR
+T1  - Modeling river water quality parameters using modified adaptive neuro fuzzy inference system
+A1  - Azad, Armin
+A1  - Karami, Hojat
+A1  - Farzin, Saeed
+A1  - Mousavi, Sayed Farhad
+A1  - Kisi, Ozgur
+Y1  - 2019///
+KW  - ANFIS
+KW  - Ant colony optimization for continuous domains
+KW  - Evolutionary algorithm
+KW  - Particle swarm optimization
+KW  - Water quality parameters
+PB  - Editorial Office of Water Science and Engineering
+JF  - Water Science and Engineering
+VL  - 12
+IS  - 1
+SP  - 45
+EP  - 54
+DO  - 10.1016/j.wse.2018.11.001
+N2  - Water quality is always one of the most important factors in human health. Artificial intelligence models are respected methods for modeling water quality. The evolutionary algorithm (EA)is a new technique for improving the performance of artificial intelligence models such as the adaptive neuro fuzzy inference system (ANFIS)and artificial neural networks (ANN). Attempts have been made to make the models more suitable and accurate with the replacement of other training methods that do not suffer from some shortcomings, including a tendency to being trapped in local optima or voluminous computations. This study investigated the applicability of ANFIS with particle swarm optimization (PSO)and ant colony optimization for continuous domains (ACO R )in estimating water quality parameters at three stations along the Zayandehrood River, in Iran. The ANFIS-PSO and ANFIS-ACO R methods were also compared with the classic ANFIS method, which uses least squares and gradient descent as training algorithms. The estimated water quality parameters in this study were electrical conductivity (EC), total dissolved solids (TDS), the sodium adsorption ratio (SAR), carbonate hardness (CH), and total hardness (TH). Correlation analysis was performed using SPSS software to determine the optimal inputs to the models. The analysis showed that ANFIS-PSO was the better model compared with ANFIS-ACO R . It is noteworthy that EA models can improve ANFIS' performance at all three stations for different water quality parameters.
+ER  - 
+TY  - JOUR
+T1  - Ensemble data assimilation methods for improving river water quality forecasting accuracy
+A1  - Loos, Sibren
+A1  - Shin, Chang Min
+A1  - Sumihar, Julius
+A1  - Kim, Kyunghyun
+A1  - Cho, Jaegab
+A1  - Weerts, Albrecht H
+Y1  - 2020///
+KW  - Data assimilation
+KW  - Ensemble kalman filter
+KW  - River basin modelling
+KW  - Water quality forecasting
+PB  - Elsevier Ltd
+JF  - Water Research
+VL  - 171
+DO  - 10.1016/j.watres.2019.115343
+N2  - River water quality is one of the main challenges that societies face during the 21st century. Accurate and reliable real-time prediction of water quality is an effective adaptation measure to counteract water quality issues such as accidental spill and harmful algae blooms. To improve accuracy and skill of water quality forecasts along the Yeongsan River in South Korea three different ensemble data assimilation (DA) methods have been investigated: the traditional Ensemble Kalman Filter (EnKF) and two related algorithms (Dud-EnKF and EnKF-GS) that offer either possibilities to improve initial conditions for non-linear models or reduce computation time (important for real-time forecasting) by using a (smaller) time-lagged ensemble to estimate the Kalman gain. Twin experiments, assimilating synthetic observations of three algae species and phosphate concentrations, with relatively small ensemble sizes showed that all three DA methods improved forecast accuracy and skill with only subtle difference between the methods. They all improved the model accuracy at downstream locations with very similar performances but due to spurious correlation, the accuracy at upstream locations was somewhat deteriorated. The experiments also showed no clear trend of improvement by increasing the ensemble size from 8 to 64. The real world experiments, assimilating real observations of three algae species and phosphate concentrations, showed that less improvement was achieved compared to the twin experiments. Further improvement of the model accuracy may be achieved with different state variable definitions, use of different perturbation and error modelling settings and/or better calibration of the deterministic water quality model.
+ER  - 
+TY  - JOUR
+T1  - Decision Tree-Based Data Mining and Rule Induction for Identifying High Quality Groundwater Zones to Water Supply Management: a Novel Hybrid Use of Data Mining and GIS
+A1  - Jeihouni, Mehrdad
+A1  - Toomanian, Ara
+A1  - Mansourian, Ali
+Y1  - 2020///
+KW  - Decision tree
+KW  - Geostatistics
+KW  - Random forest
+KW  - Random tree
+KW  - Water quality
+PB  - Springer
+JF  - Water Resources Management
+VL  - 34
+IS  - 1
+SP  - 139
+EP  - 154
+DO  - 10.1007/s11269-019-02447-w
+N2  - Groundwater is an important source to supply drinking water demands in both arid and semi-arid regions. Nevertheless, locating high quality drinking water is a major challenge in such areas. Against this background, this study proceeds to utilize and compare five decision tree-based data mining algorithms including Ordinary Decision Tree (ODT), Random Forest (RF), Random Tree (RT), Chi-square Automatic Interaction Detector (CHAID), and Iterative Dichotomiser 3 (ID3) for rule induction in order to identify high quality groundwater zones for drinking purposes. The proposed methodology works by initially extracting key relevant variables affecting water quality (electrical conductivity, pH, hardness and chloride) out of a total of eight existing parameters, and using them as inputs for the rule induction process. The algorithms were evaluated with reference to both continuous and discrete datasets. The findings were speculative of the superiority, performance-wise, of rule induction using the continuous dataset as opposed to the discrete dataset. Based on validation results, in continuous dataset, RF and ODT showed higher and RT showed acceptable performance. The groundwater quality maps were generated by combining the effective parameters distribution maps using inducted rules from RF, ODT, and RT, in GIS environment. A quick glance at the generated maps reveals a drop in the quality of groundwater from south to north as well as from east to west in the study area. The RF showed the highest performance (accuracy of 97.10%) among its counterparts; and so the generated map based on rules inducted from RF is more reliable. The RF and ODT methods are more suitable in the case of continuous dataset and can be applied for rule induction to determine water quality with higher accuracy compared to other tested algorithms.
+ER  - 
+TY  - JOUR
+T1  - Estimation of nonlinear water-quality trends in high-frequency monitoring data
+A1  - Yang, Guoxiang
+A1  - Moyer, Douglas L
+Y1  - 2020///
+KW  - Generalized additive models
+KW  - High-frequency data
+KW  - Time series analysis
+KW  - Trend estimation
+KW  - Turbidity
+KW  - Water temperature
+PB  - Elsevier B.V.
+JF  - Science of the Total Environment
+VL  - 715
+DO  - 10.1016/j.scitotenv.2020.136686
+N2  - Recent advances in high-frequency water-quality sensors have enabled direct measurements of physical and chemical attributes in rivers and streams nearly continuously. Water-quality trends can be used to identify important watershed-scale changes driven by natural and anthropogenic influences. Statistical methods to estimate trends using high-frequency data are lacking. To address this gap, an evaluation of the generalized additive model (GAM) approach to test for trends in high-frequency data was conducted. Our proposed framework includes methods for handling serial correlation, trend estimation and slope-change detection, and trend interpretation at arithmetic scale for log-transformed variables. Water-temperature and turbidity data, representing two analytes with different temporal patterns, collected from the James River at Cartersville, Virginia, USA, were chosen for this analysis. Results indicated that the model, including flow, season, time covariates, and interaction between flow and season performed well for both analytes. The same model structure was applied to specific conductance data, collected from a small highly urbanized watershed, with satisfactory model performance. The water temperature GAM results indicated that the significant decreasing-then-increasing patterns after 2012 were mainly driven by air temperature changes. The turbidity trend was not significant over time. The specific conductance results showed a consistently upward trend over the last decade due to ever-increasing urbanization in the small watershed. This study suggests that the GAM method has great potential as a useful tool for trend analysis on high-frequency data, and for informing watershed managers of hydro-climatic and human influences on water quality by detecting crucial signal variation over time.
+ER  - 
+TY  - JOUR
+T1  - The Feasibility of Integrative Radial Basis M5Tree Predictive Model for River Suspended Sediment Load Simulation
+A1  - Tao, Hai
+A1  - Keshtegar, Behrooz
+A1  - Yaseen, Zaher Mundher
+Y1  - 2019///
+KW  - Discharge information
+KW  - Hybrid model
+KW  - M5 tree model
+KW  - River engineering sustainability
+KW  - Sediment transport modeling
+PB  - Springer
+JF  - Water Resources Management
+VL  - 33
+IS  - 13
+SP  - 4471
+EP  - 4490
+DO  - 10.1007/s11269-019-02378-6
+N2  - Accurate suspended sediment transport prediction is highly significant for multiple river engineering sustainability. Conceptually evidenced, sediment load transport is highly stochastic, spatial distributed and redundant pattern due to the incorporation of various hydrological and morphological variables such as river flow discharge and sediment physical properties. The motivation of this study is to explore the feasibility of newly intelligent model called Radial basis M5 model tree (RM5Tree) for suspended sediment load (St) prediction for daily scale information at Trenton hydrological station, Delaware River. Numerous input combination attributes are formulated based on the preceding information of sediment and river flow discharge. The prediction accuracy “based statistical and graphical visualizations” of the proposed model validated against numerous well-established predictive models including response surface method (RSM), artificial neural network (ANN) and classical M5Tree based models. The investigated input combinations behaved differently from one case to another. The optimum input combination attributes are included two months lead times of sediment and discharge information to predict one step ahead St. The attained results of the proposed RM5Tree model exhibited a remarkable prediction accuracy with minimal values of root mean square error (RMSE≈2091 ton/day) and coefficient of determination (R2≈0.86). This presenting a percentage of enhancement in the prediction accuracies by (51.6, 53.1 and 26.3) over (RSM, ANN and M5Tree) optimal models over the testing phase.
+ER  - 
+TY  - JOUR
+T1  - Towards the comprehensive water quality control in Lake Taihu: Correlating chlorphyll a and water quality parameters with generalized additive model
+A1  - Liu, Lili
+A1  - Dong, Yongcheng
+A1  - Kong, Ming
+A1  - Zhou, Jian
+A1  - Zhao, Hanbin
+A1  - Wang, Yupeng
+A1  - Zhang, Meng
+A1  - Wang, Zhiping
+Y1  - 2020///
+KW  - Chlorophyll a
+KW  - Eutrophication control
+KW  - Generalized additive models
+KW  - Lake Taihu
+KW  - Water quality parameters
+PB  - Elsevier B.V.
+JF  - Science of the Total Environment
+VL  - 705
+DO  - 10.1016/j.scitotenv.2019.135993
+N2  - In this study, the generalized additive model (GAM) was used to analyze seasonal monitoring data from Lake Taihu, collected from 2010 to 2014, with the aim to explore the correlation between chlorophyll a (Chla) and other water quality parameters. The selected optimal multivariable GAM could effectively explain the concentration variation of Chla occurring during each season, and the interpretation degree followed the order: summer > autumn > spring > winter. The fitting results indicated that the concentration variation of Chla could reflect that of biochemical oxygen demand and chemical oxygen demand in all seasons. In addition, the total phosphorus showed strong ability to explain the concentration change of Chla in spring and summer, as the growth of algae would be affected when the concentration of phosphorus shifted high or low. Nitrogen showed strong ability to explain the variations in Chla concentration in autumn. The conclusions of the optimal multivariable GAM could provide decision basis for the eutrophication control. In other words, the prevention of eutrophication outbreaks could be carried out via the targeted control of key water pollutants. According to these results, the concentration of Chla was higher in northern and western lake during summer and autumn, the management should focus on nutrient input of adjacent rivers.
+ER  - 
+TY  - JOUR
+T1  - A machine learning model to assess the ecosystem response to water policy measures in the Tagus River Basin (Spain)
+A1  - Valerio, Carlotta
+A1  - Stefano, Lucia De
+A1  - Martínez-Muñoz, Gonzalo
+A1  - Garrido, Alberto
+Y1  - 2021///
+KW  - Biological Quality Elements
+KW  - Multiple stressors
+KW  - Nutrient threshold
+KW  - Random Forest
+KW  - Water Framework Directive
+PB  - Elsevier B.V.
+JF  - Science of the Total Environment
+VL  - 750
+DO  - 10.1016/j.scitotenv.2020.141252
+N2  - Anthropogenic activities are seriously endangering the conservation of biodiversity worldwide, calling for urgent actions to mitigate their impact on ecosystems. We applied machine learning techniques to predict the response of freshwater ecosystems to multiple anthropogenic pressures, with the goal of informing the definition of water policy targets and management measures to recover and protect aquatic biodiversity. Random Forest and Gradient Boosted Regression Trees algorithms were used for the modelling of the biological indices of macroinvertebrates and diatoms in the Tagus river basin (Spain). Among the anthropogenic stressors considered as explanatory variables, the categories of land cover in the upstream catchment area and the nutrient concentrations showed the highest impact on biological communities. The model was then used to predict the biological response to different nutrient concentrations in river water, with the goal of exploring the effect of different regulatory thresholds on the ecosystem status. Specifically, we considered the maximum nutrient concentrations set by the Spanish legislation, as well as by the legislation of other European Union Member States. According to our model, the current nutrient thresholds in Spain ensure values of biological indices consistent with the good ecological status in only about 60% of the total number of water bodies. By applying more restrictive nutrient concentrations, the number of water bodies with biological indices in good status could increase by almost 40%. Moreover, coupling more restrictive nutrient thresholds with measures that improve the riparian habitat yields up to 85% of water bodies with biological indices in good status, thus proving to be a key approach to restore the status of the ecosystem.
+ER  - 
+TY  - JOUR
+T1  - Optimizing the water treatment design and management of the artificial lake with water quality modeling and surrogate-based approach
+A1  - Liu, Chuankun
+A1  - Hu, Yue
+A1  - Yu, Ting
+A1  - Xu, Qiang
+A1  - Liu, Chaoqing
+A1  - Li, Xi
+A1  - Shen, Chao
+Y1  - 2019///
+KW  - ANN
+KW  - Artificial lake
+KW  - Genetic algorithm
+KW  - Machine learning
+KW  - Multi-optimization
+KW  - SVM
+KW  - Surrogate model
+KW  - Water quality
+PB  - MDPI AG
+JF  - Water (Switzerland)
+VL  - 11
+IS  - 2
+DO  - 10.3390/w11020391
+N2  - The tradeoff between engineering costs and water treatment of the artificial lake system has a significant effect on engineering decision-making. However, decision-makers have little access to scientific tools to balance engineering costs against corresponding water treatment. In this study, a framework integrating numerical modeling, surrogate models and multi-objective optimization is proposed. This framework was applied to a practical case in Chengdu, China. A water quality model (MIKE21) was developed, providing training datasets for surrogate modeling. The Artificial Neural Network (ANN) and Support Vector Machine (SVM) were utilized for training surrogate models. Both surrogate models were validated with the coefficient of determinations (R2) greater than 0.98. SVM performed more stably with limited training data sizes while ANN demonstrated higher accuracies with more training samples. The multi-objective optimization model was developed using the genetic algorithm, with targets of reducing both engineering costs and target aquatic pollutant concentrations. An optimal target concentration after treatment was identified, characterized by the ammonia concentration (1.3 mg/L) in the artificial lake. Furthermore, scenarios with varying water quality in the upstream river were evaluated. Given the assumption of deteriorated upstream water quality in the future, the optimal proportion of pre-treatment in the total costs is increasing.
+ER  - 
+TY  - JOUR
+T1  - Estimation of high frequency nutrient concentrations from water quality surrogates using machine learning methods
+A1  - Castrillo, María
+A1  - García, Álvaro López
+Y1  - 2020///
+KW  - Machine learning
+KW  - Random forests
+KW  - Soft-sensors
+KW  - Surrogate parameters
+KW  - Water monitoring
+KW  - Water quality
+PB  - Elsevier Ltd
+JF  - Water Research
+VL  - 172
+DO  - 10.1016/j.watres.2020.115490
+N2  - Continuous high frequency water quality monitoring is becoming a critical task to support water management. Despite the advancements in sensor technologies, certain variables cannot be easily and/or economically monitored in-situ and in real time. In these cases, surrogate measures can be used to make estimations by means of data-driven models. In this work, variables that are commonly measured in-situ are used as surrogates to estimate the concentrations of nutrients in a rural catchment and in an urban one, making use of machine learning models, specifically Random Forests. The results are compared with those of linear modelling using the same number of surrogates, obtaining a reduction in the Root Mean Squared Error (RMSE) of up to 60.1%. The profit from including up to seven surrogate sensors was computed, concluding that adding more than 4 and 5 sensors in each of the catchments respectively was not worthy in terms of error improvement.
+ER  - 

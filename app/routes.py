@@ -1,12 +1,7 @@
-import re
-
-import RISparser
-from pandas.core.indexes.base import ensure_index
 from app import app
-from flask import flash, request, redirect, url_for, render_template, send_from_directory, render_template_string
+from flask import flash, request, redirect, render_template, render_template_string
 from config import Config
-import ris
-
+import string
 
 #perlengkapan convert
 import bibtexparser
@@ -14,11 +9,7 @@ import pandas as pd
 from bibtexparser.bparser import BibTexParser
 
 #convert from ris file
-from pprint import pprint
-from RISparser import parser, readris, read, TAG_KEY_MAPPING
-
-#rispy
-import rispy
+from RISparser import readris, TAG_KEY_MAPPING
 
 #pip install bibliograph.parsing
 from bibliograph.parsing import parsers
@@ -38,24 +29,30 @@ html = '''<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href={{ url_for('static', filename='favicon.ico')}} type="image/x-icon">
     <link rel="stylesheet" href={{ url_for('static',filename='bootstrap-4.6.0-dist/css/bootstrap.css')}} type="text/css">
-    <link rel="stylesheet" href={{ url_for('static',
-    filename='DataTables/DataTables-1.10.23/css/dataTables.bootstrap4.min.css') }} type="text/css">
-    <link rel="stylesheet" href={{ url_for('static',
-    filename='DataTables/Buttons-1.6.5/css/buttons.bootstrap4.min.css') }} type="text/css">
+    <!-- <link rel="stylesheet" href={{ url_for('static',filename='DataTables/DataTables-1.10.23/css/dataTables.bootstrap4.min.css') }} type="text/css">
+    <link rel="stylesheet" href={{ url_for('static', filename='DataTables/Buttons-1.6.5/css/buttons.bootstrap4.min.css') }} type="text/css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
 
     <!-- Jquery-->
     <script src={{ url_for('static',filename='jquery-3.5.1.js')}}></script>
     <!-- Datatable-->
-    <script src={{ url_for('static',
-    filename='DataTables/datatables.min.js') }}></script>
-    <!-- datatable bbotstrap-->
-    <script src={{ url_for('static',
-    filename='DataTables/DataTables-1.10.23/js/dataTables.bootstrap4.min.js') }}></script>
+
+    <!--<script src={{ url_for('static',
+    filename='DataTables/datatables.min.js') }}></script>-->
+    <!-- datatable bootstrap-->
+    <!--<script src={{ url_for('static',
+    filename='DataTables/DataTables-1.10.23/js/dataTables.bootstrap4.min.js') }}></script>-->
     <!-- Button-->
-    <script src={{ url_for('static',
-    filename='DataTables/Buttons-1.6.5/js/buttons.bootstrap4.min.js') }}></script>
-    <script src={{ url_for('static',
-    filename='DataTables/Buttons-1.6.5/js/buttons.colVis.min.js') }}></script>
+    <!--<script src={{ url_for('static',
+    filename='DataTables/Buttons-1.6.5/js/buttons.bootstrap4.min.js') }}></script>-->
+    
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+      <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src={{ url_for('static', filename='DataTables/Buttons-1.6.5/js/buttons.colVis.min.js') }}></script>
      <!-- Jquery-->
     <script src={{ url_for('static',filename='jszip.min.js')}}></script>
     <script src={{ url_for('static',filename='pdfmake.min.js')}}></script>
@@ -120,7 +117,22 @@ html = '''<!DOCTYPE html>
         $('#example').DataTable({
             dom: 'Blfrtip',
         buttons: [
-            'csv', 'excel', 'pdf', 'colvis'
+            {
+                extend:    'excelHtml5',
+                text:      '<i class="fa fa-file-excel-o"></i>',
+                titleAttr: 'Excel'
+            },
+            {
+                extend:    'csvHtml5',
+                text:      '<i class="fa fa-file-text-o"></i>',
+                titleAttr: 'CSV'
+            },
+            {
+                extend:    'pdfHtml5',
+                text:      '<i class="fa fa-file-pdf-o"></i>',
+                titleAttr: 'PDF'
+            }
+            , 'colvis'
         ]
         });
     });
@@ -153,6 +165,12 @@ def file_ris(filename):
     return '.' in filename and \
         filename.rsplit('.', 1)[1].lower() in Config.ALLOWED_EXTENSIONS[2] 
 
+def remove_punch(text):
+    for punct in string.punctuation:
+        text = str(text)
+        text = text.replace(punct, '')
+    return text
+
 
 @app.route('/', methods=['GET', 'POST'])
 def convert():
@@ -176,22 +194,15 @@ def convert():
                                                 table = df.to_html(index='Nomor', header='true', table_id='example', 
                                                 classes='table table-striped table-bordered'))
             elif file and file_ris(file.filename):
-                # TODO
-                list1 = []
                 ris_file = file.stream.read()
                 reader = io.BytesIO(ris_file)
                 wrapper = io.TextIOWrapper(reader, encoding='utf-8')
                 entries = readris(wrapper) 
-                # for entry in entries:
-                #     list1.append(entry)
                 df = pd.DataFrame(entries)
+                df['publication_year'] = df['publication_year'].apply(remove_punch)
                 df.index += 1
                 return render_template_string(html, filenm = file.filename, 
-                                                table = df.to_html(header='true', table_id='example', 
-                                                classes='table table-striped table-bordered'))    
-                # a = ris_file.save('data.ris')
-                # with open(ris_file, 'r', encoding='utf-8') as data_file:
-                # return df.to_html()
+                                                table = df.to_html(header='true', table_id='example', classes='table table-striped table-bordered'))
             else:
                 data = xmltodict.parse(file)
                 json_data = json.dumps(data)
